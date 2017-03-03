@@ -1,4 +1,4 @@
-package by.mozgo.entity;
+package by.mozgo.gift.entity;
 
 /**
  * @author Andrei Mozgo
