@@ -4,10 +4,10 @@ package by.mozgo.gift.entity;
  * @author Andrei Mozgo
  */
 public class Candy extends AbstractSweet {
-    CandyType type;
+    private CandyType type;
 
-    public Candy(float price, int weight, byte sugar, CandyType type) {
-        super(price, weight, sugar);
+    public Candy(String name, float price, int weight, int sugar, CandyType type) {
+        super(name, price, weight, sugar);
         this.type = type;
     }
 

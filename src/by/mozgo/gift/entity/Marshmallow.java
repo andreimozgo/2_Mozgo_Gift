@@ -4,10 +4,10 @@ package by.mozgo.gift.entity;
  * @author Andrei Mozgo
  */
 public class Marshmallow extends AbstractSweet {
-    MarshmallowColor color;
+    private MarshmallowColor color;
 
-    public Marshmallow(float price, int weight, byte sugar, MarshmallowColor color) {
-        super(price, weight, sugar);
+    public Marshmallow(String name, float price, int weight, int sugar, MarshmallowColor color) {
+        super(name, price, weight, sugar);
         this.color = color;
     }
 
