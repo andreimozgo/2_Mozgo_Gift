@@ -14,4 +14,20 @@ public class Marshmallow extends AbstractSweet {
     public MarshmallowColor getColor() {
         return color;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+        if (obj == this)
+            return true;
+        if (obj.getClass() == this.getClass()) {
+            Marshmallow marshmallow = (Marshmallow) obj;
+            if (marshmallow.name.equals(this.name) && marshmallow.price == this.price && marshmallow.weight == this.weight
+                    && marshmallow.sugar == this.sugar && marshmallow.color.equals(this.color)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

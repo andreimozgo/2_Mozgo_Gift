@@ -1,4 +1,4 @@
-package test.by.mozgo.gift;
+package test.by.mozgo.gift.reader;
 
 import by.mozgo.gift.exception.SweetReaderException;
 import by.mozgo.gift.reader.SweetReader;

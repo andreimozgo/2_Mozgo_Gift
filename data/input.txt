@@ -1,1 +1,1 @@
-candy RedHat 0.05 0.02 0.005 CHOCOLATE
+candy RedHat 0.05 20 5 CHOCOLATE
