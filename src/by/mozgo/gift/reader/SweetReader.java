@@ -20,8 +20,8 @@ public class SweetReader {
 
     public static List<String> readData(String filename) throws SweetReaderException {
         if (filename == null) {
-            LOGGER.log(Level.FATAL, "Input file not found!");
-            throw new SweetReaderException("Input file = null!");
+            LOGGER.log(Level.FATAL, "Input file name = null!");
+            throw new SweetReaderException("Input file name = null!");
         }
         List<String> lines = new ArrayList<>();
         File inputFile = new File(filename);
@@ -33,11 +33,12 @@ public class SweetReader {
             }
             in.close();
         } catch (IOException e) {
-            LOGGER.log(Level.FATAL, "Input file not found!" + filename);
-            throw new SweetReaderException("Input file not found!" + filename);
+            LOGGER.log(Level.FATAL, "Input file not found!");
+            throw new SweetReaderException("Input file not found!");
         }
         if (lines.size() == 0) {
-            throw new SweetReaderException("Input file empty");
+            LOGGER.log(Level.FATAL, "Input file empty! ");
+            throw new SweetReaderException("Input file empty! ");
         }
         return lines;
     }

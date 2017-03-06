@@ -8,7 +8,12 @@ import by.mozgo.gift.entity.MarshmallowColor;
  */
 public class MarshmallowCreator implements SweetCreator<Marshmallow> {
     @Override
-    public Marshmallow createSweet(String name,int ... args) {
-        return new Marshmallow(name, args[0],args[1],args[2], MarshmallowColor.values()[args[3]]);
+    public Marshmallow createSweet(String[] marshmallowParameters) throws IllegalArgumentException {
+        String name = marshmallowParameters[1];
+        float price = Float.parseFloat(marshmallowParameters[2]);
+        int weight = Integer.parseInt(marshmallowParameters[3]);
+        int sugar = Integer.parseInt(marshmallowParameters[4]);
+        MarshmallowColor form = MarshmallowColor.valueOf(marshmallowParameters[5].toUpperCase());
+        return new Marshmallow(name, price, weight, sugar, form);
     }
 }
