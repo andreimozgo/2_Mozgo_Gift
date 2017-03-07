@@ -1,1 +1,2 @@
 candy RedHat 0.05 20 5 CHOCOLATE
+marshmallow RedPischevik 2.20 180 80 ROSE
