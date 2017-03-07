@@ -1,3 +1,4 @@
 2017-03-07 01:56:07 [FATAL] (SweetReader.java:36) - Input file not found!
 2017-03-07 12:48:46 [FATAL] (SweetReader.java:36) - Input file not found!
 2017-03-07 13:51:19 [FATAL] (SweetReader.java:36) - Input file not found!
+2017-03-07 14:44:09 [INFO ] (SweetLogic.java:22) - Total gift weight = 200

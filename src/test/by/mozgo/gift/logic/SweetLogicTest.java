@@ -2,7 +2,7 @@ package test.by.mozgo.gift.logic;
 
 import by.mozgo.gift.entity.*;
 import by.mozgo.gift.logic.SweetLogic;
-import by.mozgo.gift.sort.SweetWeightComparator;
+import by.mozgo.gift.comparator.SweetWeightComparator;
 import org.junit.Test;
 
 import java.util.ArrayList;

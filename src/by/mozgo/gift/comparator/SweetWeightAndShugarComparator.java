@@ -1,4 +1,4 @@
-package by.mozgo.gift.sort;
+package by.mozgo.gift.comparator;
 
 import java.util.Comparator;
 
