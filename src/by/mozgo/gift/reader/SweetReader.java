@@ -1,6 +1,5 @@
 package by.mozgo.gift.reader;
 
-import by.mozgo.gift.exception.SweetReaderException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,10 +17,10 @@ import java.util.List;
 public class SweetReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static List<String> readData(String filename) throws SweetReaderException {
+    public static List<String> readData(String filename) throws RuntimeException {
         if (filename == null) {
-            LOGGER.log(Level.FATAL, "Input file name = null!");
-            throw new SweetReaderException("Input file name = null!");
+            LOGGER.log(Level.FATAL, "Input filename is null!");
+            throw new RuntimeException("Input filename is null!");
         }
         List<String> lines = new ArrayList<>();
         File inputFile = new File(filename);
@@ -34,11 +33,11 @@ public class SweetReader {
             in.close();
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "Input file not found!");
-            throw new SweetReaderException("Input file not found!");
+            throw new RuntimeException(e + "Input file not found!");
         }
         if (lines.size() == 0) {
             LOGGER.log(Level.FATAL, "Input file empty! ");
-            throw new SweetReaderException("Input file empty! ");
+            throw new RuntimeException("Input file empty! ");
         }
         return lines;
     }

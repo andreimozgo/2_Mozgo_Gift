@@ -4,7 +4,6 @@ import by.mozgo.gift.entity.AbstractSweet;
 import by.mozgo.gift.entity.Candy;
 import by.mozgo.gift.entity.Cookie;
 import by.mozgo.gift.entity.Marshmallow;
-import by.mozgo.gift.exception.SweetBuilderException;
 import by.mozgo.gift.factoryMethod.CandyCreator;
 import by.mozgo.gift.factoryMethod.CookieCreator;
 import by.mozgo.gift.factoryMethod.MarshmallowCreator;
@@ -26,7 +25,7 @@ public class SweetBuilder {
     private static final int SWEET_TYPE_INDEX = 0;
     private static final String PARAMETERS_DELIMITER = "\\s";
 
-    public static List<AbstractSweet> generateSweets(List<String> inputData) throws SweetBuilderException {
+    public static List<AbstractSweet> generateSweets(List<String> inputData) throws RuntimeException {
         List<AbstractSweet> gift = new ArrayList<>();
         for (int inputStringIndex = 0; inputStringIndex < inputData.size();) {
             String sweet = inputData.get(inputStringIndex);
@@ -75,7 +74,7 @@ public class SweetBuilder {
         }
         if(gift.size() == 0){
             LOGGER.log(Level.FATAL, "Incorrect input file!");
-            throw new SweetBuilderException("Incorrect input file!");
+            throw new RuntimeException("Incorrect input file!");
         }
         return gift;
     }

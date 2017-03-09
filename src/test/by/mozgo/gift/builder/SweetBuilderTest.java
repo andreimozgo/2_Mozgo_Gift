@@ -4,7 +4,6 @@ import by.mozgo.gift.builder.SweetBuilder;
 import by.mozgo.gift.entity.AbstractSweet;
 import by.mozgo.gift.entity.Candy;
 import by.mozgo.gift.entity.CandyType;
-import by.mozgo.gift.exception.SweetBuilderException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class SweetBuilderTest {
     @Test
-    public void TestGenerateSweets() throws SweetBuilderException {
+    public void TestGenerateSweets() {
         List<String> lines = new ArrayList<>();
         lines.add("candy RedHat 0.05 20 5 CHOCOLATE");
         Candy candy = new Candy("RedHat", 0.05f, 20, 5, CandyType.CHOCOLATE);
@@ -26,8 +25,8 @@ public class SweetBuilderTest {
         Assert.assertEquals(sweets, generatedSweets);
     }
 
-    @Test(expected = SweetBuilderException.class)
-    public void TestGenerateTrianglesException() throws SweetBuilderException {
+    @Test(expected = RuntimeException.class)
+    public void TestGenerateTrianglesException() {
         List<String> lines = new ArrayList<>();
         lines.add("1 2 w 3 5 6");
         SweetBuilder.generateSweets(lines);

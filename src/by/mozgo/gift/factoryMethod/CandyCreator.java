@@ -7,7 +7,6 @@ import by.mozgo.gift.entity.CandyType;
  * @author Andrei Mozgo
  */
 public class CandyCreator implements SweetCreator<Candy> {
-
     @Override
     public Candy createSweet(String[] candyParameters) throws IllegalArgumentException {
             String name = candyParameters[1];

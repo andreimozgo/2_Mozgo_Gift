@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author Andrei Mozgo
  */
-public abstract class SweetComparator implements Comparator<AbstractSweet>{
+public abstract class SweetComparator implements Comparator<AbstractSweet> {
     protected SweetComparator nextComparator;
     protected Comparator comparator;
 
@@ -16,11 +16,11 @@ public abstract class SweetComparator implements Comparator<AbstractSweet>{
         this.comparator = this;
     }
 
-    public abstract void sort (List<AbstractSweet> sweets);
+    public abstract void sort(List<AbstractSweet> sweets);
 
     public void build(List<AbstractSweet> sweets, SweetChain chain) {
         if (chain.getComparators().contains(comparator)) {
-            sort (sweets);
+            sort(sweets);
         }
         if (nextComparator != null) {
             nextComparator.build(sweets, chain);
