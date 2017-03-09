@@ -8,3 +8,7 @@
 2017-03-07 17:04:38 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
 2017-03-07 17:04:38 [FATAL] (SweetReader.java:36) - Input file not found!
 2017-03-07 17:04:38 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
+2017-03-09 14:23:30 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
+2017-03-09 14:23:30 [FATAL] (SweetReader.java:36) - Input file not found!
+2017-03-09 14:23:30 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
+2017-03-09 14:45:27 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
