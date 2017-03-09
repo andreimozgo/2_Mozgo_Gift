@@ -35,42 +35,42 @@ public class SweetBuilder {
             switch (sweetParameters[SWEET_TYPE_INDEX]) {
                 case "candy":
                     if (sweetParameters.length != MAX_CANDY_PARAMETERS) {
-                        throw new SweetBuilderException("Invalid number of parameters in line " + inputStringIndex + ".");
+                        LOGGER.log(Level.ERROR, "Invalid number of parameters in line " + inputStringIndex + ".");
                     } else {
                         try {
                             Candy candy = new CandyCreator().createSweet(sweetParameters);
                             gift.add(candy);
                         } catch (IllegalArgumentException e) {
-                            throw new SweetBuilderException("Incorrect symbol in line " + inputStringIndex + ".");
+                            LOGGER.log(Level.ERROR, "Incorrect symbol in line " + inputStringIndex + ".");
                         }
                     }
                     break;
                 case "cookie":
                     if (sweetParameters.length != MAX_COOKIE_PARAMETERS) {
-                        throw new SweetBuilderException("Invalid number of parameters in line " + inputStringIndex + ".");
+                        LOGGER.log(Level.ERROR, "Invalid number of parameters in line " + inputStringIndex + ".");
                     } else {
                         try {
                             Cookie cookie = new CookieCreator().createSweet(sweetParameters);
                             gift.add(cookie);
                         } catch (IllegalArgumentException e) {
-                            throw new SweetBuilderException("Incorrect symbol in line " + inputStringIndex + ".");
+                            LOGGER.log(Level.ERROR, "Incorrect symbol in line " + inputStringIndex + ".");
                         }
                     }
                     break;
                 case "marshmallow":
                     if (sweetParameters.length != MAX_MARSHMALLOW_PARAMETERS) {
-                        throw new SweetBuilderException("Invalid number of parameters in line " + inputStringIndex + ".");
+                        LOGGER.log(Level.ERROR, "Invalid number of parameters in line " + inputStringIndex + ".");
                     } else {
                         try {
                             Marshmallow marshmallow = new MarshmallowCreator().createSweet(sweetParameters);
                             gift.add(marshmallow);
                         } catch (IllegalArgumentException e) {
-                            throw new SweetBuilderException("Incorrect symbol in line " + inputStringIndex + ".");
+                            LOGGER.log(Level.ERROR, "Incorrect symbol in line " + inputStringIndex + ".");
                         }
                     }
                     break;
                 default:
-                    throw new SweetBuilderException("Incorrect input line " + inputStringIndex + ": unknown sweet.");
+                    LOGGER.log(Level.ERROR, "Incorrect input line " + inputStringIndex + ": unknown sweet.");
             }
         }
         if(gift.size() == 0){

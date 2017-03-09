@@ -19,3 +19,16 @@
 2017-03-09 15:04:15 [FATAL] (SweetReader.java:36) - Input file not found!
 2017-03-09 15:04:15 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
 2017-03-09 15:06:22 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
+2017-03-09 15:07:06 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
+2017-03-09 15:07:06 [FATAL] (SweetReader.java:36) - Input file not found!
+2017-03-09 15:07:06 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
+2017-03-09 15:10:45 [FATAL] (SweetReader.java:36) - Input file not found!
+2017-03-09 15:10:45 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
+2017-03-09 15:16:36 [ERROR] (MainTest.java:33) - by.mozgo.gift.exception.SweetBuilderException: Incorrect symbol in line 3.
+2017-03-09 15:16:36 [FATAL] (SweetReader.java:36) - Input file not found!
+2017-03-09 15:16:36 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
+2017-03-09 15:18:47 [ERROR] (MainTest.java:33) - by.mozgo.gift.exception.SweetBuilderException: Incorrect symbol in line 3.
+2017-03-09 15:19:10 [ERROR] (MainTest.java:33) - by.mozgo.gift.exception.SweetBuilderException: Incorrect symbol in line 3.
+2017-03-09 15:20:30 [ERROR] (MainTest.java:33) - by.mozgo.gift.exception.SweetBuilderException: Incorrect symbol in line 3.
+2017-03-09 15:24:01 [ERROR] (SweetBuilder.java:44) - Incorrect symbol in line 3.
+2017-03-09 15:24:01 [INFO ] (SweetLogic.java:22) - Total gift weight = 200
