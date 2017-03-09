@@ -2,11 +2,9 @@ package test.by.mozgo.gift.logic;
 
 import by.mozgo.gift.entity.*;
 import by.mozgo.gift.logic.SweetLogic;
-import by.mozgo.gift.comparator.SweetWeightComparator;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -24,17 +22,6 @@ public class SweetLogicTest {
         sweets.add(secondCandy);
         int totalWeight = new SweetLogic().calculateWeight(sweets);
         assertEquals(200,totalWeight);
-    }
-
-    @Test
-    public void testSortByWeight(){
-        Marshmallow firstSweet = new Marshmallow("RedPischevik", 2.20f, 180, 80, MarshmallowColor.ROSE);
-        Candy secondSweet = new Candy("RedHat", 0.05f, 20, 5, CandyType.CHOCOLATE);
-        List<AbstractSweet> sweets = new ArrayList<>();
-        sweets.add(firstSweet);
-        sweets.add(secondSweet);
-        Collections.sort(sweets, new SweetWeightComparator());
-        assertEquals(180,sweets.get(1).getWeight());
     }
 
     @Test

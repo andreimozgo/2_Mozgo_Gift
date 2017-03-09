@@ -31,4 +31,13 @@ public abstract class AbstractSweet {
     public int getSugar() {
         return sugar;
     }
+
+    @Override
+    public String toString() {
+        return "name=" + name +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", sugar=" + sugar +
+                "\n";
+    }
 }
