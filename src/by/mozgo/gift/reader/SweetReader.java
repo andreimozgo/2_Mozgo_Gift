@@ -23,9 +23,7 @@ public class SweetReader {
             throw new RuntimeException("Input filename is null!");
         }
         List<String> lines = new ArrayList<>();
-        File inputFile = new File(filename);
-        try {
-            BufferedReader in = new BufferedReader(new FileReader(inputFile));
+        try (BufferedReader in = new BufferedReader(new FileReader(new File(filename)))) {
             String s;
             while ((s = in.readLine()) != null) {
                 lines.add(s);
