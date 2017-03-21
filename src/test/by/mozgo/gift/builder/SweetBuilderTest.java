@@ -26,7 +26,7 @@ public class SweetBuilderTest {
     }
 
     @Test(expected = RuntimeException.class)
-    public void testGenerateTrianglesException() {
+    public void testGenerateSweetsException() {
         List<String> lines = new ArrayList<>();
         lines.add("1 2 w 3 5 6");
         SweetBuilder.generateSweets(lines);
