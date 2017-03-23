@@ -4,3 +4,7 @@
 2017-03-09 21:37:23 [ERROR] (SweetBuilder.java:72) - Incorrect input line 1: unknown sweet.
 2017-03-09 21:37:23 [FATAL] (SweetBuilder.java:76) - Incorrect input file!
 2017-03-09 21:37:23 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
+2017-03-24 01:33:30 [FATAL] (SweetReader.java:32) - Input file not found!
+2017-03-24 01:33:30 [ERROR] (SweetBuilder.java:72) - Incorrect input line 1: unknown sweet.
+2017-03-24 01:33:30 [FATAL] (SweetBuilder.java:76) - Incorrect input file!
+2017-03-24 01:33:30 [INFO ] (SweetLogic.java:22) - Total gift weight = 400
