@@ -28,7 +28,6 @@ public class SweetReader {
             while ((s = in.readLine()) != null) {
                 lines.add(s);
             }
-            in.close();
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "Input file not found!");
             throw new RuntimeException(e + "Input file not found!");
