@@ -1,4 +1,4 @@
-package by.mozgo.gift.factoryMethod;
+package by.mozgo.gift.factorymethod;
 
 import by.mozgo.gift.entity.Cookie;
 import by.mozgo.gift.entity.CookieForm;

@@ -4,9 +4,9 @@ import by.mozgo.gift.entity.AbstractSweet;
 import by.mozgo.gift.entity.Candy;
 import by.mozgo.gift.entity.Cookie;
 import by.mozgo.gift.entity.Marshmallow;
-import by.mozgo.gift.factoryMethod.CandyCreator;
-import by.mozgo.gift.factoryMethod.CookieCreator;
-import by.mozgo.gift.factoryMethod.MarshmallowCreator;
+import by.mozgo.gift.factorymethod.CandyCreator;
+import by.mozgo.gift.factorymethod.CookieCreator;
+import by.mozgo.gift.factorymethod.MarshmallowCreator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +25,7 @@ public class SweetBuilder {
     private static final int SWEET_TYPE_INDEX = 0;
     private static final String PARAMETERS_DELIMITER = "\\s";
 
-    public static List<AbstractSweet> generateSweets(List<String> inputData) throws RuntimeException {
+    public static List<AbstractSweet> generateSweets(List<String> inputData) {
         List<AbstractSweet> gift = new ArrayList<>();
         for (int inputStringIndex = 0; inputStringIndex < inputData.size();) {
             String sweet = inputData.get(inputStringIndex);
@@ -72,7 +72,7 @@ public class SweetBuilder {
                     LOGGER.log(Level.ERROR, "Incorrect input line " + inputStringIndex + ": unknown sweet.");
             }
         }
-        if(gift.size() == 0){
+        if (gift.isEmpty()) {
             LOGGER.log(Level.FATAL, "Incorrect input file!");
             throw new RuntimeException("Incorrect input file!");
         }

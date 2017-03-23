@@ -1,4 +1,4 @@
-package by.mozgo.gift.factoryMethod;
+package by.mozgo.gift.factorymethod;
 
 /**
  * @author Andrei Mozgo
